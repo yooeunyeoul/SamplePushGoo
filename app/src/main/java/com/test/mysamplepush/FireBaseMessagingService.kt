@@ -1,21 +1,9 @@
 package com.test.mysamplepush
 
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.content.Context
-import android.content.Intent
-import android.media.RingtoneManager
-import android.os.Build
-import android.support.v4.app.NotificationCompat
-import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class FireBaseMessagingService : FirebaseMessagingService() {
-    override fun zzd(p0: Intent?) {
-
-    }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage?) {
 
@@ -31,13 +19,9 @@ class FireBaseMessagingService : FirebaseMessagingService() {
     private fun sendNotification(messageBody: String?) {
 
 
-
     }
 
 
-//    override fun zzd(p0: Intent?) {
-//
-//    }
 //    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
 //
 //        Log.d(TAG, "From: " + remoteMessage!!.from!!)
