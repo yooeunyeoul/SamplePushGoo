@@ -125,7 +125,7 @@ class FireBaseMessagingService : FirebaseMessagingService() {
                 .setContentTitle(title)
                 .setLargeIcon(bigPicture)
                 .setContentTitle(message)
-                .setAutoCancel(false)
+                .setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
                 .setColor(Color.BLUE)
                 .setStyle(
