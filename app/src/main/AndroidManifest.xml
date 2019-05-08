@@ -10,6 +10,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
+        <!--<meta-data-->
+                <!--android:name="com.google.firebase.messaging.default_notification_icon"-->
+                <!--android:resource="@drawable/ic_action_name" />-->
+
+        <!--<meta-data-->
+                <!--android:name="com.google.firebase.messaging.default_notification_color"-->
+                <!--android:resource="@color/colorAccent" />-->
+
         <service android:name=".FireBaseMessagingService"
         android:stopWithTask="false">
 
@@ -24,6 +32,8 @@
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- 내 앱에서 어떤 컨텐츠를 많이 사용하는지 알아내기 위한 App link Indexing 기능을 사용하라는 경고이다. 나의 앱을 더 최적화 할 수 있는 방법을 알려주기 위한 설정 방법-->
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
     </application>
