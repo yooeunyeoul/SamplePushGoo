@@ -5,8 +5,11 @@ import com.kakao.auth.Session
 import com.kakao.util.exception.KakaoException
 
 class KakaoSession : ISessionCallback {
+    init {
+        Session.getCurrentSession().addCallback(instance)
+        Session.getCurrentSession().checkAndImplicitOpen()
+    }
 
-    private var instance: KakaoSession? = null
 
     override fun onSessionOpenFailed(exception: KakaoException?) {
 
@@ -18,20 +21,5 @@ class KakaoSession : ISessionCallback {
 
     companion object{
         val instance = KakaoSession()
-
-    }
-
-    object private fun init(): KakaoSession? {
-
-        if (instance == null) {
-            val KakaoSession = KakaoSession()
-            Session.getCurrentSession().addCallback(KakaoSession)
-            Session.getCurrentSession().checkAndImplicitOpen()
-
-            instance = KakaoSession
-        } else {
-            return instance as KakaoSession
-        }
-        return null
     }
 }

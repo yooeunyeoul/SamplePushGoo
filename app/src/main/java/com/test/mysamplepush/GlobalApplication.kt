@@ -4,7 +4,7 @@ import android.app.Application
 import com.kakao.auth.*
 
 
-open class GlobalApplication : Application() {
+class GlobalApplication : Application() {
     public class KakaoSDKAdapter : KakaoAdapter() {
         /**
          * Session Config에 대해서는 default값들이 존재한다.
