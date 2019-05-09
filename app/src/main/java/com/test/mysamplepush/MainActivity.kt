@@ -24,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         KakaoSDK.init(GlobalApplication.KakaoSDKAdapter())
 
+        KakaoSession.instance.setListener(object : KakaoListener {
+            override fun success() {
+
+            }
+        })
 
         hashKey = getKeyHash(this)
 
