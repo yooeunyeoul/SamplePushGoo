@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.test.mysamplepush">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+            android:name=".GlobalApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -10,16 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <!--<meta-data-->
-                <!--android:name="com.google.firebase.messaging.default_notification_icon"-->
-                <!--android:resource="@drawable/ic_action_name" />-->
-
-        <!--<meta-data-->
-                <!--android:name="com.google.firebase.messaging.default_notification_color"-->
-                <!--android:resource="@color/colorAccent" />-->
-
         <service android:name=".FireBaseMessagingService"
-        android:stopWithTask="false">
+                 android:stopWithTask="false">
 
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
@@ -36,6 +30,9 @@
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
+        <meta-data
+                android:name="com.kakao.sdk.AppKey"
+                android:value="f7128ffe00381aa7716708f7f6ce00ff"/>
     </application>
 
 </manifest>
