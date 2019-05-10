@@ -12,6 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
+
         <service android:name=".FireBaseMessagingService"
                  android:stopWithTask="false">
 
@@ -32,7 +33,10 @@
         </activity>
         <meta-data
                 android:name="com.kakao.sdk.AppKey"
-                android:value="f7128ffe00381aa7716708f7f6ce00ff"/>
+                android:value="@string/kakao_app_key"/>
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_key"/>
     </application>
 
 </manifest>
