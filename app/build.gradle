@@ -46,6 +46,12 @@ dependencies {
     // Naver sdk를 사용하기 위해 필요.
     implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.5'
 
+    // Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    //콘솔을 이용한 명령어 입력기능
+    implementation 'com.facebook.stetho:stetho-js-rhino:1.5.1'
+
 
 }
 
