@@ -2,6 +2,7 @@ package com.test.mysamplepush
 
 import android.app.Application
 import android.content.Context
+import com.facebook.stetho.Stetho
 import com.kakao.auth.KakaoSDK
 import com.nhn.android.naverlogin.OAuthLogin
 
@@ -16,6 +17,7 @@ class GlobalApplication : Application() {
         super.onCreate()
         KakaoSDK.init(KakaoSDKAdapter())
         mOAuthLoginModule.init(applicationContext,"RVRtA1mlYtgGMg6TpBTm","ZDiY4sWJyy","이름뭐지")
+        Stetho.initializeWithDefaults(this)
 
 
     }
