@@ -9,8 +9,6 @@ class SqlLiteSampleActivity : AppCompatActivity() {
 
     val dbName = "DBName"
     val tableName = "person"
-    val tableName3 = "person22222222222222222"
-
 
     private lateinit var sampleDB: SQLiteDatabase
 
