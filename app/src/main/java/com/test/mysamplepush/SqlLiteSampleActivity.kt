@@ -9,7 +9,6 @@ class SqlLiteSampleActivity : AppCompatActivity() {
 
     val dbName = "DBName"
     val tableName = "person"
-    val tableName4 = "되돌리기 후 커밋 다시 테스트 "
 
     private lateinit var sampleDB: SQLiteDatabase
 
