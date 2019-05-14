@@ -28,4 +28,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
 
+    <Button
+        android:background="@drawable/btn_orange_states"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_orange_states"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
 </RelativeLayout>
