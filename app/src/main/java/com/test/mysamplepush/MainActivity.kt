@@ -12,6 +12,7 @@ import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.FacebookSdk
 import com.facebook.login.LoginResult
+import com.google.firebase.iid.FirebaseInstanceId
 import com.kakao.auth.ISessionCallback
 import com.kakao.auth.Session
 import com.kakao.network.ErrorResult
@@ -37,6 +38,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener { instanceIdResult ->
+            val newToken = instanceIdResult.token
+            Log.e("onCreate",newToken)
+        }
+
         FacebookSdk.sdkInitialize(GlobalApplication.context())
         FacebookSdk.setApplicationId("869795810030493")
         callback = Sessioncallback()
